@@ -33,6 +33,8 @@ then
     apt-get install -y libssl-dev libffi-dev python-dev python-pip
     apt-get --purge -y remove python-cffi
     pip install --upgrade markupsafe setuptools ansible==2.0.2.0
+
+    exit 0
 fi
 
 
