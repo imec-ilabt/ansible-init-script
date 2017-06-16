@@ -1,5 +1,11 @@
 #!/bin/bash -ex
 
+if which ansible-playbook && which ansible-galaxy
+then
+    echo 'Ansible already installed: Nothing to do.'
+    exit 0
+fi
+
 if [ ! -e /etc/issue ]
 then
     echo 'Unknown distro: no /etc/issue. Giving up.'
